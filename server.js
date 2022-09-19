@@ -16,6 +16,9 @@ app.get("/", function (req, res) {
 app.get("/broadcast", function (req, res) {
   res.sendFile(__dirname + "/public/broadcast.html");
 });
+app.get("/.well-known/security.txt", function (req, res) {
+  res.sendFile(__dirname + "/public/.well-known/security.txt");
+});
 
 io.sockets.on("error", (e) => console.log(e));
 io.sockets.on("connection", (socket) => {
