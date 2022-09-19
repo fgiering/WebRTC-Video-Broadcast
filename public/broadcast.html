@@ -3,6 +3,11 @@
   <head>
     <title>Broadcaster</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
   </head>
   <body>
     <section class="select">
@@ -10,12 +15,8 @@
       <select id="audioSource"></select>
     </section>
 
-    <section class="select">
-      <label for="videoSource">Video source: </label>
-      <select id="videoSource"></select>
-    </section>
-
-    <video playsinline autoplay muted></video>
+    <h2>Abhören</h2>
+    <audio autoplay controls></audio>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/broadcast.js"></script>
   </body>
