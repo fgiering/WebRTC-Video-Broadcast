@@ -99,6 +99,7 @@ function gotStream(stream) {
   );
   audioElement.srcObject = stream;
   socket.emit("broadcaster");
+  document.getElementById("recording").hidden = false;
 }
 
 function handleError(error) {
